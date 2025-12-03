@@ -31,6 +31,7 @@ return {
         { "<leader>cx", desc = "open Shades", icon = "" },
         { "<leader>su", desc = "undotree", icon = "󰔱" },
         { "<leader>tc", desc = "comments", icon = "󰒕" },
+        { "<leader>tn", desc = "clipboard", icon = "" },
         { "<leader>sna", desc = "messages", icon = "󰍢" },
         { "<leader>di", desc = "dict", icon = "" },
         { "<leader>|", desc = "vertical terminal", icon = "" },
