@@ -29,6 +29,38 @@ return {
           { name = "buffer" },
           { name = "path" },
         },
+        mapping = {
+          -- 1. Confirmar la selección (sin seleccionar automáticamente el primer item)
+          ["<CR>"] = cmp.mapping.confirm({ select = false }),
+
+          -- 2. Lógica para el Tabulador:
+          -- La lógica de <Tab> es crucial. Debe priorizar saltar en LuaSnip.
+          ["<Tab>"] = cmp.mapping(function(fallback)
+            local luasnip = require("luasnip")
+            if cmp.visible() then
+              -- Si el menú de CMP está visible, selecciona el siguiente item.
+              cmp.select_next_item()
+            elseif luasnip.expand_or_jumpable() then
+              -- Si estás dentro de un snippet, salta al siguiente placeholder.
+              luasnip.jump()
+            else
+              -- De lo contrario, inserta un Tab normal.
+              fallback()
+            end
+          end, { "i", "s" }), -- Aplicar en modos Insertar y Snippet
+
+          -- <S-Tab> (Shift+Tab) para saltar hacia atrás en los snippets
+          ["<S-Tab>"] = cmp.mapping(function(fallback)
+            local luasnip = require("luasnip")
+            if cmp.visible() then
+              cmp.select_prev_item()
+            elseif luasnip.jump(-1) then
+            -- Salta al placeholder anterior.
+            else
+              fallback()
+            end
+          end, { "i", "s" }),
+        },
       })
     end,
   },
