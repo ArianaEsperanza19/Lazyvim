@@ -1,3 +1,5 @@
+--INFO: Flash is a plugin for Neovim that provides enhanced navigation and search capabilities using visual hints and
+--treesitter integration.
 return {
   "folke/flash.nvim",
   event = "VeryLazy",

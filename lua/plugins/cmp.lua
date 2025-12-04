@@ -1,3 +1,4 @@
+--INFO: This file is a configuration for the nvim-cmp plugin in Neovim, which provides autocompletion features.
 return {
   {
     "hrsh7th/nvim-cmp",

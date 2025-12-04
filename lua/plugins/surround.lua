@@ -1,3 +1,4 @@
+--INFO: Its a plugin that provides easy and efficient ways to add, change, and delete surrounding characters or tags in text.
 return {
   {
     "kylechui/nvim-surround", -- Plugin principal de nvim-surround

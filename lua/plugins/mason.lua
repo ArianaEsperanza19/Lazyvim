@@ -1,3 +1,4 @@
+--INFO: Mason is a plugin for Neovim that manages external tools such as LSP servers, DAP servers, linters, and formatters.
 return {
 
   "mason-org/mason.nvim",

@@ -1,7 +1,6 @@
 -- INFO: ~/.config/nvim/lua/plugins/peek.lua
 -- Peek es un plugin para Neovim que permite previsualizar archivos Markdown en tiempo real en tu navegador preferido.
 -- Necesita Deno para funcionar correctamente.
---
 -- Instalación de Deno:
 -- curl -fsSL https://deno.land/x/install/install.sh | sh
 -- Verifica si deno esta instalado y cual es su ubicacion.
@@ -20,7 +19,6 @@
 -- - Resaltado de sintaxis.
 -- - Temas oscuro y claro.
 -- - Actualización en tiempo real.
---
 -- Atajo para abrir/cerrar Peek: <leader>sm
 
 return {

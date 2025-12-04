@@ -1,3 +1,5 @@
+--INFO: Avante is a plugin for Neovim that integrates AI-powered code assistance and chat functionality directly
+--into the editor.
 return {
   "yetone/avante.nvim",
   build = vim.fn.has("win32") ~= 0 and "powershell -ExecutionPolicy Bypass -File Build.ps1 -BuildFromSource false"
